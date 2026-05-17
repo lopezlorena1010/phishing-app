@@ -266,13 +266,12 @@ if analizar:
         <span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span>
       </div>
       {verdict_html}
-      <div class="meta-row"><span class="meta-key">Links externos</span><span class="meta-val {val_class(pct_links_ext, 0.3, invertido=True)}">{pct_links_ext:.2f}</span></div>
-<div class="meta-row"><span class="meta-key">Links externos</span><span class="meta-val {val_class(pct_links_ext, 0.3, invertido=True)}">{pct_links_ext:.2f}</span></div>
-<div class="meta-row"><span class="meta-key">Links nulos</span><span class="meta-val {val_class(pct_links_nulos, 0.5)}">{pct_links_nulos:.2f}</span></div>
-<div class="meta-row"><span class="meta-key">Recursos externos</span><span class="meta-val {val_class(pct_recursos_ext, 0.3, invertido=True)}">{pct_recursos_ext:.2f}</span></div>
+     <div class="meta-row"><span class="meta-key">Links externos</span><span class="meta-val {val_class(pct_links_ext, 0.07, invertido=True)}">{pct_links_ext:.2f}</span></div>
+<div class="meta-row"><span class="meta-key">Links nulos</span><span class="meta-val {val_class(pct_links_nulos, 0.05)}">{pct_links_nulos:.2f}</span></div>
+<div class="meta-row"><span class="meta-key">Recursos externos</span><span class="meta-val {val_class(pct_recursos_ext, 0.25, invertido=True)}">{pct_recursos_ext:.2f}</span></div>
 <div class="meta-row"><span class="meta-key">Error en dominio</span><span class="meta-val {val_class(mismatch_dominio, 1)}">{mismatch_dominio_label}</span></div>
-<div class="meta-row"><span class="meta-key">Números en URL</span><span class="meta-val {val_class(n_numeros_url, 4)}">{int(n_numeros_url)}</span></div>
-<div class="meta-row"><span class="meta-key">Guiones en URL</span><span class="meta-val {val_class(n_guiones, 3, invertido=True)}">{int(n_guiones)}</span></div>
+<div class="meta-row"><span class="meta-key">Números en URL</span><span class="meta-val {val_class(n_numeros_url, 8)}">{int(n_numeros_url)}</span></div>
+<div class="meta-row"><span class="meta-key">Guiones en URL</span><span class="meta-val {val_class(n_guiones, 2, invertido=True)}">{int(n_guiones)}</span></div>
 <div class="meta-row"><span class="meta-key">Formularios inseguros</span><span class="meta-val {val_class(form_inseguro, 1)}">{form_inseguro_label}</span></div>
 <div class="meta-row"><span class="meta-key">Riesgo redirecciones</span><span class="meta-val {val_class(riesgo_redir_nula, 0, invertido=True)}">{riesgo_redir_label}</span></div>
 <div class="meta-row" style="border:none"><span class="meta-key">Riesgo meta externos</span><span class="meta-val {val_class(riesgo_meta_ext, 0, invertido=True)}">{riesgo_meta_label}</span></div>
