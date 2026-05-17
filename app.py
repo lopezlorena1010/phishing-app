@@ -142,7 +142,7 @@ with st.expander("📖 Diccionario de variables"):
     st.markdown("""
     | Variable | Definición | Señal de phishing |
     |---|---|---|
-    | **Links externos** | Porcentaje de links que apuntan a dominios externos | Valor bajo — sitios falsos evitan links externos para que la gente no salga del lugar|
+    | **Links externos** | Porcentaje de links que apuntan a dominios externos | Valor alto — sitios falsos suelen contener múltiples enlaces externos o referencias sospechosas hacia dominios no confiables|
     | **Redirecciones nulas** | Índice de riesgo de redirecciones a null o about:blank | Valor bajo — sitios falsos no tienen flujos de navegación reales |
     | **Error en dominio** | El dominio visible no coincide con el dominio real | Valor alto — dominio que no coincide es señal clara de fraude |
     | **Recursos externos** | Porcentaje de recursos (imágenes, CSS, JS) cargados desde dominios externos | Valor bajo — sitios falsos cargan pocos recursos externos legítimos |
@@ -266,7 +266,7 @@ if analizar:
         <span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span>
       </div>
       {verdict_html}
-     <div class="meta-row"><span class="meta-key">Links externos</span><span class="meta-val {val_class(pct_links_ext, 0.07, invertido=True)}">{pct_links_ext:.2f}</span></div>
+     <div class="meta-row"><span class="meta-key">Links externos</span><span class="meta-val {val_class(pct_links_ext, 0.07)}">{pct_links_ext:.2f}</span></div>
 <div class="meta-row"><span class="meta-key">Links nulos</span><span class="meta-val {val_class(pct_links_nulos, 0.05)}">{pct_links_nulos:.2f}</span></div>
 <div class="meta-row"><span class="meta-key">Recursos externos</span><span class="meta-val {val_class(pct_recursos_ext, 0.25, invertido=True)}">{pct_recursos_ext:.2f}</span></div>
 <div class="meta-row"><span class="meta-key">Error en dominio</span><span class="meta-val {val_class(mismatch_dominio, 1)}">{mismatch_dominio_label}</span></div>
