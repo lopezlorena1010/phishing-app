@@ -126,7 +126,7 @@ st.markdown("""
       <div class="header-sub">detector de urls maliciosas · xgboost + pipeline</div>
     </div>
   </div>
-  <span class="header-badge">Modelo · XGBoost + Pipeline</span>
+  <span class="header-badge">Modelo · XGBoost</span>
 </div>
 """, unsafe_allow_html=True)
 
@@ -136,6 +136,22 @@ def load_model():
     return joblib.load("xgb_phishing.pkl")
 
 model = load_model()
+
+# ── Diccionario de variables ──
+with st.expander("📖 Diccionario de variables"):
+    st.markdown("""
+    | Variable | Definición | Señal de phishing |
+    |---|---|---|
+    | **Links externos** | Porcentaje de links que apuntan a dominios externos | Valor bajo — sitios falsos evitan links externos legítimos |
+    | **Redirecciones nulas** | Índice de riesgo de redirecciones a null o about:blank | Valor bajo — sitios falsos no tienen flujos de navegación reales |
+    | **Error en dominio** | El dominio visible no coincide con el dominio real | Valor alto — dominio que no coincide es señal clara de fraude |
+    | **Recursos externos** | Porcentaje de recursos (imágenes, CSS, JS) cargados desde dominios externos | Valor bajo — sitios falsos cargan pocos recursos externos legítimos |
+    | **Links nulos** | Porcentaje de links sin destino (href vacío o "#") | Valor alto — sitios falsos tienen muchos links vacíos sin navegación real |
+    | **Guiones en URL** | Cantidad de guiones (-) en la URL | Valor bajo — URLs con pocos guiones son más sospechosas |
+    | **Riesgo meta externos** | Índice de riesgo combinado de elementos meta, scripts y links externos | Valor bajo — sitios falsos tienen pocos elementos externos |
+    | **Números en URL** | Cantidad de números en la URL | Valor alto — URLs con muchos números son señal de fraude |
+    | **Formularios inseguros** | Formularios que envían datos por HTTP sin cifrar | Valor alto — formulario inseguro indica intención de robo de datos |
+    """)
 
 # ── Inputs ──
 st.markdown('<div class="section-label">Características de la URL</div>', unsafe_allow_html=True)
