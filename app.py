@@ -142,7 +142,7 @@ with st.expander("📖 Diccionario de variables"):
     st.markdown("""
     | Variable | Definición | Señal de phishing |
     |---|---|---|
-    | **Links externos** | Porcentaje de links que apuntan a dominios externos | Valor bajo — sitios falsos evitan links externos legítimos |
+    | **Links externos** | Porcentaje de links que apuntan a dominios externos | Valor bajo — sitios falsos evitan links externos para que la gente no salga del lugar|
     | **Redirecciones nulas** | Índice de riesgo de redirecciones a null o about:blank | Valor bajo — sitios falsos no tienen flujos de navegación reales |
     | **Error en dominio** | El dominio visible no coincide con el dominio real | Valor alto — dominio que no coincide es señal clara de fraude |
     | **Recursos externos** | Porcentaje de recursos (imágenes, CSS, JS) cargados desde dominios externos | Valor bajo — sitios falsos cargan pocos recursos externos legítimos |
